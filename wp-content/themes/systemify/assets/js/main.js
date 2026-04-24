@@ -148,7 +148,7 @@
         });
 
         if (!response.ok) {
-          throw new Error(`Server responded with status ${response.status} ${response.statusText}`);
+          throw new Error('server_error');
         }
 
         const data = await response.json();
@@ -166,12 +166,10 @@
           feedback.style.cssText =
             'padding:.75rem 1rem;border-radius:8px;background:rgba(239,68,68,.08);color:#dc2626;font-weight:600;margin-bottom:1rem;';
         }
-      } catch (err) {
+      } catch (_err) {
         feedback.hidden = false;
         feedback.textContent =
-          err.message
-            ? `Something went wrong (${err.message}). Please try again or email us directly at hello@systemifyautomation.com.`
-            : 'Something went wrong. Please try again or email us directly at hello@systemifyautomation.com.';
+          'Unable to send your message. Please try again or contact us directly at hello@systemifyautomation.com.';
         feedback.style.cssText =
           'padding:.75rem 1rem;border-radius:8px;background:rgba(239,68,68,.08);color:#dc2626;font-weight:600;margin-bottom:1rem;';
       } finally {
