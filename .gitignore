@@ -1,0 +1,48 @@
+# WordPress core (managed separately)
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/index.php
+/xmlrpc.php
+/license.txt
+/readme.html
+
+# WordPress uploads
+/wp-content/uploads/
+
+# WordPress cache plugins
+/wp-content/cache/
+/wp-content/upgrade/
+/wp-content/backup-db/
+/wp-content/advanced-cache.php
+/wp-content/wp-cache-config.php
+
+# WordPress config with secrets
+wp-config.php
+
+# WordPress plugins (managed via composer or separately)
+# /wp-content/plugins/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build artifacts
+dist/
+*.min.css.map
+*.min.js.map
+
+# Environment files
+.env
+.env.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
